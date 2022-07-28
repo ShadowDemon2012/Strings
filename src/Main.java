@@ -12,5 +12,15 @@ public class Main {
 //        Задание 3
         String fullNameReplace = fullName.replace('ё', 'е');
         System.out.println("Данные ФИО сотрудника — " + fullNameReplace);
+//      Задание 4
+        String removingSpace = fullName.trim();
+        int firstSpace = removingSpace.indexOf(' ');
+        int check = removingSpace.lastIndexOf(' ');
+        String lastNameExtraction = removingSpace.substring(0, firstSpace);
+        System.out.println("Фамилия " + lastNameExtraction);
+        String firstNameExtraction = removingSpace.substring(firstSpace, check);
+        System.out.println("Имя " + firstNameExtraction);
+        String secondNameExtraction = removingSpace.substring(check, removingSpace.length());
+        System.out.println("Отчество " + secondNameExtraction);
     }
 }
